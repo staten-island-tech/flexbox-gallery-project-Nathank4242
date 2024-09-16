@@ -8,7 +8,7 @@ html,
 }
 
 .card {
-  height: 30rem;
+  height: auto;
   margin: 3rem auto;
   width: 26%;
   border: 2pc solid rgb(0, 0, 0);
