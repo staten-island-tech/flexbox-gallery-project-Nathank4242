@@ -7,6 +7,23 @@ html,
   padding: 0;
 }
 
+.header {
+  text-align: center;
+  font-size: 100px;
+  flex-shrink: 3;
+}
+
+.card-header {
+  margin-top: 1.2rem;
+  color: ;
+}
+
+.card-number {
+  color: #000000;
+}
+
+/*header*/
+
 .card {
   height: auto;
   margin: 3rem auto;
@@ -16,14 +33,34 @@ html,
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;  
+  justify-content: space-around;
 }
 
-.header{
-  text-align: center;
-  font-size: 100px;
-  flex-shrink: 3;
+.card1 {
+  height: auto;
+  margin: 3rem auto;
+  width: 26%;
+  border: 2rem solid rgb(0, 0, 0);
+  border-radius: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }
+
+.card2 {
+  height: auto;
+  margin: 3rem auto;
+  width: 26%;
+  border: 2rem solid rgb(0, 0, 0);
+  border-radius: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* making the cards*/
 
 .card-img {
   width: 100%;
@@ -37,23 +74,53 @@ html,
   flex-direction: row;
 }
 
+.card-img1 {
+  width: 100%;
+  height: 100%;
+  transform-origin: bottom center;
+
+  transition: 0.5s all ease;
+  object-fit: cover;
+  flex-shrink: 3;
+  display: flex;
+  flex-direction: row;
+}
+
+.card-img2 {
+  width: 100%;
+  height: 100%;
+  transform-origin: bottom center;
+
+  transition: 0.5s all ease;
+  object-fit: cover;
+  flex-shrink: 3;
+  display: flex;
+  flex-direction: row;
+}
+
+/*animation*/
+
 .card:hover .card-img {
   transform: perspective(100px) rotateX(50deg);
 }
 
+.card1:hover {
+  animation: contract 0.5s ease-in-out forwards;
+}
+
+.card1:not(:hover) {
+  animation: expand 0.5s ease-in-out;
+}
+
+.card2:hover {
+  animation: slide-in 1s ease-in-out forwards;
+}
+
+.card2:not(:hover) {
+  animation: slide-out 1s ease-in-out;
+}
+
 /* I used bootstrap for effects  */
-
-
-.card-header {
-  margin-top: 1.2rem;
-  color:
-}
-
-.card-number {
-
-  color: #000000;
-}
-
 
 .container {
   width: 90%;
@@ -64,19 +131,50 @@ html,
   display: flex;
   flex-wrap: wrap;
 }
-  
-
-
 
 @media (max-width: 800px) {
   .container {
-  flex-direction: column;
+    flex-direction: column;
   }
 }
 
+@keyframes contract {
+  0% {
+    transform: scaleY(100%);
+  }
+  100% {
+    transform: scaleY(50%);
+  }
+}
 
+@keyframes expand {
+  0% {
+    transform: scaleY(50%);
+  }
+  100% {
+    transform: scaleY(100%);
+  }
+}
 
+@keyframes slide-in {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
 
+@keyframes slide-out {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+/*
 .card_content {
   color: #fff;
   width: 100%;
