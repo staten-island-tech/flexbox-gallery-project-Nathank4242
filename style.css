@@ -5,23 +5,26 @@ html,
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color: black
+  background-color: black;
 }
+
 
 .header {
   text-align: center;
-  font-size: 20px;
+  font-size: 40px;
   flex-shrink: 3;
+  color: white
 }
 
 .card-header {
-  margin-top: 1.2rem;
-  color: #7a7373; ;
+
+  color: #ffffff; 
+  text-align: center;
 }
 
 .card-number {
-  margin-bottom: 1.2rem;
-  color: #7a7373;
+  color: #ffffff;
+  text-align: center;
 
 }
 
@@ -32,13 +35,14 @@ html,
   margin: 3rem auto;
   width: 32%;
   border: 2rem solid red;
-  border-color: red;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  border-radius: 25px;
-  border-style: solid;
+  border-radius: 1rem;
+  box-shadow: 5px 10px;
+  background-color: black;
+
 }
 
 
@@ -48,7 +52,7 @@ html,
   object-fit: contain;
   max-height: 90%;
   
-  /*transform-origin: bottom center;
+  transform-origin: bottom center;
   transform: perspective(100px) rotateX(0);
   transition: 0.5s all ease;
   object-fit: contain;
@@ -58,12 +62,12 @@ html,
 
 }
 
-/*
+
 .card:hover .card-img {
   transform: perspective(100px) rotateX(50deg);
 }
 
- I used bootstrap for effects  */
+ /*I used bootstrap for effects  */
 
 .container {
   width: 90%;
@@ -77,7 +81,7 @@ html,
 
 @media screen and (max-width:1000px){
   .card {
-    width 45%;
+    width: 45%;
    }
 }
 
@@ -86,13 +90,12 @@ html,
     flex-direction: column;
   }
   .card{
-    width 100%;
+    width: 100%;
   }
 }
 
 
 
-/*
 
 .card_content {
   color: #fff;
@@ -107,10 +110,10 @@ html,
   transform-origin: top center;
   transform: perspective(100px) rotateX(-50deg);
   opacity: 0;
-  background: \linear-gradient(
+  background: linear-gradient(
     to right,
-    rgba(255, 65, 108, 0.8),
-    rgba(255, 75, 43, 0.8)
+    rgba(200, 255, 0, 0.8),
+    rgba(52, 214, 255, 0.8)
   );
 
   transition: 0.5s all ease;
@@ -131,6 +134,112 @@ html,
   min-height: 90%;
 
 }
-
-
 /* I used bootstrap for effects  */
+
+
+.card1 {
+  height: 500px;
+  margin: 3rem auto;
+  width: 32%;
+  border: 2rem solid red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 1rem;
+  box-shadow: 5px 10px;
+  background-color: black;
+}
+
+
+.card-img1 {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  max-height: 90%;
+  object-fit: contain;
+  flex-shrink: 3;
+  display: flex;
+  flex-direction: row;
+}
+
+.card1:hover {
+  animation: contract 0.5s ease-in-out forwards;
+}
+
+.card1:not(:hover){
+  animation: expand 0.5s ease-in-out;
+}
+
+
+.card2 {
+  height: 500px;
+  margin: 3rem auto;
+  width: 32%;
+  border: 2rem solid red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 1rem;
+  box-shadow: 5px 10px;
+  background-color: black;
+}
+
+
+.card-img2 {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  max-height: 90%;
+  object-fit: contain;
+  flex-shrink: 3;
+  display: flex;
+  flex-direction: row;
+}
+
+
+
+/* keyfames */
+
+@keyframes contract {
+  0% {
+    transform: scaleY(100%);
+  }
+  100% {
+    transform: scaleY(50%);
+  }
+}
+
+@keyframes expand {
+  0% {
+    transform: scaleY(50%);
+  }
+  100% {
+    transform: scaleY(100%);
+  }
+}
+
+
+
+/*animation*/
+
+.card1:hover {
+  animation: contract 0.5s ease-in-out forwards;
+}
+
+.card1:not(:hover) {
+  animation: expand 0.5s ease-in-out;
+}
+
+.card2:hover {
+  animation: rotate 1s ease-in-out forwards;
+}
+
+.card2:not(:hover) {
+  animation: rotate1 1s ease-in-out;
+}
+
+
+/* making the cards*/
+
