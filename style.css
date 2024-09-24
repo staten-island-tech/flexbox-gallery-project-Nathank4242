@@ -13,8 +13,8 @@ html,
 
 .header {
   text-align: center;
-  font-size: 40px;
-  flex-shrink: 3;
+  font-size: 7rem;
+
   color: white;
 }
 
@@ -49,11 +49,10 @@ html,
   height: 100%;
   object-fit: contain;
   max-height: 90%;
-
   transform-origin: bottom center;
   transform: perspective(100px) rotateX(0);
   transition: 0.5s all ease;
-  object-fit: contain;
+
   flex-shrink: 3;
   display: flex;
   flex-direction: row;
@@ -71,7 +70,7 @@ html,
   justify-content: space-between;
   display: flex;
   flex-direction: row;
-  display: flex;
+
   flex-wrap: wrap;
 }
 
@@ -90,7 +89,7 @@ html,
   }
 }
 
-.card_content {
+.card-content {
   color: #fff;
   width: 100%;
   height: 100%;
@@ -112,12 +111,12 @@ html,
   transition: 0.5s all ease;
 }
 
-.card:hover .card_content {
+.card:hover .card-content {
   opacity: 1;
   transform: perspective(100px) rotateX(0);
 }
 
-.card .card_content .card-number .card-header {
+.card .card-content .card-number .card-header {
   font-size: 14px;
   font-weight: 700;
   display: block;
@@ -214,33 +213,6 @@ html,
   }
 }
 
-@keyframes contract1 {
-  0% {
-    transform: scaleZ(200%);
-  }
-  100% {
-    transform: scaleZ(100%);
-  }
-}
-
-@keyframes expand1 {
-  0% {
-    transform: scaleZ(100%);
-  }
-  100% {
-    transform: scaleZ(200%);
-  }
-}
-
-@keyframes zoom {
-  0% {
-    transform: scaleZ(100%);
-  }
-  100% {
-    transform: scaleZ(200%);
-  }
-}
-
 @keyframes shake {
   0% {
     transform: translate(1px, 1px) rotate(0deg);
@@ -283,7 +255,7 @@ html,
   }
 
   50% {
-    transform: scale(1.1);
+    transform: scale(2);
   }
 
   100% {
